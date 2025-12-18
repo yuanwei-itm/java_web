@@ -18,4 +18,11 @@ public interface DeptService {
      * @param id
      */
     void deleteById(Integer id);
+
+    /**
+     * 新增部门
+     * @param dept
+     * @return
+     */
+    boolean add(Dept dept);
 }
