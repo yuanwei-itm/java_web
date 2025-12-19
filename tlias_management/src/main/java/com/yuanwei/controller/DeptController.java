@@ -48,8 +48,6 @@ public class DeptController {
 //        System.out.println("删除部门id：" + depid);
 //        return Result.success();
 //    }
-
-
     /**
      *  删除部门  方式三：直接定义参数名与请求参数名一致
      * @param id
@@ -60,5 +58,14 @@ public class DeptController {
         System.out.println("删除部门id：" + id);
         deptService.deleteById(id);
         return Result.success();
+    }
+
+    /**
+     * 添加部门
+     */
+    @PostMapping("/depts")
+    public Result add(@RequestBody Dept dept) {
+        System.out.println("添加部门：" + dept);
+        return deptService.add(dept) ? Result.success() : Result.error("添加失败");
     }
 }
