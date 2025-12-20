@@ -25,4 +25,15 @@ public interface DeptService {
      * @return
      */
     boolean add(Dept dept);
+
+    /**
+     * 根据id查询部门
+     */
+    Dept getById(Integer id);
+
+    /**
+     * 修改部门
+     * @param dept
+     */
+    void updateById(Dept dept);
 }
