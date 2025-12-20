@@ -68,4 +68,25 @@ public class DeptController {
         System.out.println("添加部门：" + dept);
         return deptService.add(dept) ? Result.success() : Result.error("添加失败");
     }
+
+
+    /**
+     * 根据id查询部门
+     */
+    @GetMapping("/depts/{id}")
+    public Result getInfo(@PathVariable Integer id) {
+        System.out.println("查询部门id：" + id);
+        Dept dept = deptService.getById(id);
+        return Result.success(dept);
+    }
+
+    /**
+     * 修改部门
+     */
+    @PutMapping("/depts")
+    public Result update(@RequestBody Dept dept) {
+        System.out.println("修改部门：" + dept);
+        deptService.updateById(dept);
+        return Result.success();
+    }
 }
