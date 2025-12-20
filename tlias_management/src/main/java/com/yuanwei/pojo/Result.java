@@ -2,7 +2,6 @@ package com.yuanwei.pojo;
 
 import lombok.Data;
 
-import java.io.Serializable;
 
 /**
  * 统一返回结果

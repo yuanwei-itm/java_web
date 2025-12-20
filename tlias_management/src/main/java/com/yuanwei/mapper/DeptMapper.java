@@ -3,8 +3,6 @@ package com.yuanwei.mapper;
 
 import com.yuanwei.pojo.Dept;
 import org.apache.ibatis.annotations.*;
-import org.springframework.web.bind.annotation.DeleteMapping;
-
 import java.util.List;
 
 @Mapper
